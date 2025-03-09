@@ -1,0 +1,20 @@
+syntax = "proto3";
+package grpcetst;
+
+service TestService {
+  rpc TestMethod (TestRequest) returns (TestResponse) {}
+}
+
+message TestRequest {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message TestResponse {
+    string name = 1;
+    string email = 2;
+    string password = 3;
+    string created_at = 4;
+    string updated_at = 5;
+}
